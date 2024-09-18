@@ -45,3 +45,27 @@ animals = [Bird(name="воробышек", kind='grey'),
 
 for animal in animals:
     animal_sounds(animal)
+
+
+# Используйте композицию для создания класса `Zoo`, который будет содержать
+# информацию о животных и сотрудниках. Должны быть методы для добавления
+# животных и сотрудников в зоопарк.
+class Employee:
+    def __init__(self, name, ability):
+        self.name = name
+        self.ability = ability
+
+    def act(self):
+        pass
+
+
+class Zoo:
+    def __init__(self, pets, employees):
+        self.pets = pets
+        self.employees = employees
+
+    def add_pet(self):
+        pass
+
+    def add_employee(self):
+        pass
