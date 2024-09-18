@@ -11,6 +11,7 @@ class Animal:
     
     
 class Bird(Animal):
+    # сократим кол-во писанины за счет **kwargs
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
 
@@ -38,11 +39,9 @@ def animal_sounds(animal):
         animal.make_sound()
 
 
-sparrow = Bird(name="воробышек", kind='grey')
-lion = Mammal(name="лев", kind='ferocious')
-iguana = Reptile(name="игуана", kind="skinny")
-animals = [sparrow, lion, iguana]
-
+animals = [Bird(name="воробышек", kind='grey'),
+           Mammal(name="лев", kind='ferocious'),
+           Reptile(name="игуана", kind="skinny")]
 
 for animal in animals:
     animal_sounds(animal)
