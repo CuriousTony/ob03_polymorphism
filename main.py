@@ -86,10 +86,14 @@ class Zoo:
     def add_employee(self, role):
         if role == 'vet':
             employee = Veterinarian(name='Mark', spec='veterinarian')
+            print(f"{employee.name.title()} is now working in the Zoo as a {employee.spec}!")
             self.employees.append(employee)
+            employee.treat_animals()
         elif role == 'keeper':
             employee = Zookeeper(name='Tom', spec='zookeeper')
+            print(f"{employee.name.title()} is now working in the Zoo as a {employee.spec}!")
             self.employees.append(employee)
+            employee.feed_animals()
 
     def show_list(self, choice):
         if choice == 'employee':
@@ -97,7 +101,7 @@ class Zoo:
                 print(f"{guy.name.title()} the {guy.spec}")
         elif choice == 'pets':
             for pet in self.pets:
-                print(f"{pet.name} the {pet.kind}")
+                print(f"{pet.name.title()} is now living in the Zoo!")
 
 
 leningradsky_zoopark = Zoo()
